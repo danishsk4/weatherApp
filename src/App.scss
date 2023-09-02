@@ -1,0 +1,336 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  background-image: url("./assets/background.jpg");
+  background-size: cover;
+}
+
+main {
+  width: 60vw;
+  height: 85vh;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  .errCloud {
+    width: 25rem;
+  }
+  //   background-color: #555500;
+}
+
+.boxIfNotAllowedLocation {
+  background-color: #000000b9;
+  max-width: 100rem;
+
+  width: 45rem;
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // place-items: center;
+  img {
+    width: 20rem;
+  }
+  .msg {
+    color: #fff;
+    width: 75%;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  p {
+    color: #fff;
+    font-size: 1.2rem;
+  }
+}
+.container {
+  // max-width: 100rem;
+  // width: 50vw;
+  // height: 60vh;
+  width: 55rem;
+  height: 50rem;
+  display: flex;
+  background-color: #000000b9;
+
+  color: #fff;
+  margin: auto;
+
+  //   border-radius: 1.5rem;
+
+  .leftbox {
+    width: 60%;
+    // border: 0.1rem solid #fff;
+    background-image: url("./assets/leftBoxBg.jpg");
+    background-size: cover;
+    // border-radius: 1.5rem;
+    display: grid;
+    padding: 1.5rem;
+
+    .left-top {
+      text-align: end;
+
+      justify-content: end;
+      width: 100%;
+
+      .place-Name {
+        font-size: 2.3rem;
+        .cityCouldntFound {
+          font-size: 1.3rem;
+        }
+      }
+      .country-Name {
+        font-size: 1.3rem;
+      }
+    }
+    .left-bottom {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      .timeAndDate {
+        .time {
+          font-size: 2rem;
+        }
+        .dayAndDate {
+          font-size: 1.3rem;
+        }
+      }
+      .tempareture {
+        font-size: 3.8rem;
+      }
+    }
+  }
+  .rightbox {
+    width: 40%;
+
+    // border-radius: 1.5rem;
+    // border: 0.1rem solid yellow;
+    text-align: center;
+    .right-top {
+      height: 25%;
+      //   border: 0.1rem solid #ff2;
+      padding: 2rem 0;
+
+      .errMassage {
+        // background-color: rgb(70, 124, 124);
+        height: 2rem;
+        // display: flex;
+        width: 80%;
+        margin: 0.2rem auto;
+        // padding-left: 2rem;
+        text-align: start;
+      }
+      //
+
+      // /////////////////animation/////////////////////////////
+
+      .iconContainer {
+        width: 60%;
+        // background-color: rgba(255, 255, 17, 0.144);
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        .slide-right {
+          animation: slide-right 20s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+            infinite alternate both;
+          // }
+          // .sunimg {
+          width: 9rem;
+          // display: flex;
+          // justify-content: start;
+          // margin: auto;
+          // animation: rotate-center 25s linear infinite both;
+          // margin-top: 1rem;
+        }
+      }
+    }
+
+    // change from here if any error occurs related responsive change padding
+
+    .right-bottom {
+      height: 75%;
+      //   border: 0.1rem solid #ff2;
+      padding: 3rem;
+      .weather-type {
+        font-weight: 500;
+        font-size: 3rem;
+        margin-top: 2rem;
+      }
+      .weatherTypeHr {
+        width: 80%;
+        color: #ffffff31;
+        display: flex;
+        margin: 1rem auto;
+      }
+      .placeName {
+        font-size: 1.7rem;
+        font-weight: 500;
+        margin: 1rem 0;
+      }
+      .data-rows {
+        display: flex;
+        justify-content: space-between;
+        margin: 0.5rem 0;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  @keyframes slide-right {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(20px);
+    }
+    100% {
+      transform: translateX(-20px);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 45%;
+  }
+
+  main {
+    width: 95vw;
+  }
+
+  .errMsg {
+    font-size: 2rem;
+  }
+  .container {
+    height: 45vh;
+    width: 80vw;
+
+    .leftbox {
+      padding: 1rem 0.5rem 0.5rem 0.5rem;
+      // padding: 1rem ;
+
+      .left-top {
+        line-height: 2.8rem;
+        .place-Name {
+          font-size: 2.8rem;
+          .cityCouldntFound {
+            font-size: 1rem;
+          }
+        }
+        .country-Name {
+          font-size: 1.8rem;
+        }
+      }
+      .left-bottom {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        .timeAndDate {
+          .time {
+            font-size: 2.5rem;
+          }
+          .dayAndDate {
+            font-size: 1.3rem;
+          }
+        }
+        .tempareture {
+          font-size: 2.8rem;
+        }
+      }
+    }
+    .rightbox {
+      .right-top {
+        // background-color: rgba(255, 255, 51, 0.315);
+        padding: 0.5rem 0;
+
+        .iconContainer {
+          width: 55%;
+          // background-color: rgba(255, 255, 17, 0.144);
+          display: flex;
+          justify-content: start;
+          // margin: 0 auto;
+          .slide-right {
+            animation: slide-right 20s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+              infinite alternate both;
+            // }
+            // .sunimg {
+            display: flex;
+            justify-content: center;
+            width: 9rem;
+            // margin: 0rem auto;
+            // display: flex;
+            // justify-content: start;
+            // margin: auto;
+            // animation: rotate-center 25s linear infinite both;
+            // margin-top: 1rem;
+          }
+        }
+      }
+
+      .right-bottom {
+        // background-color: rgba(126, 240, 192, 0.411);
+
+        padding: 0.5rem 1rem 0.5rem 1rem;
+
+        // change from here if any error occurs related responsive  change padding
+
+        .weather-type {
+          font-size: 1.8rem;
+          padding-top: 1rem;
+        }
+        hr {
+          margin: 1rem auto;
+        }
+        .placeName {
+          font-size: 1.4rem;
+        }
+        .data-rows {
+          margin: 0.4rem 0;
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    @keyframes slide-right {
+      0% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(10px);
+      }
+      100% {
+        transform: translateX(-10px);
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .rightbox {
+    // .right-top {
+    //   .iconContainer {
+    //     // padding: rem 0;
+    //     .slide-right {
+    //       width: 9rem !important;
+    //     }
+    //   }
+    // }
+    .right-bottom {
+      padding: 0.5rem;
+      padding-top: 2rem !important;
+      .weather-type {
+        padding-top: 1.5rem !important;
+      }
+
+      hr {
+        margin: 0.5rem auto !important;
+      }
+    }
+  }
+}

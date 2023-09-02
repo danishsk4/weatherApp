@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: url("./assets/background.jpg");
+  background-size: cover;
+}
+
+main {
+  width: 60vw;
+  height: 85vh;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+main .errCloud {
+  width: 25rem;
+}
+
+.boxIfNotAllowedLocation {
+  background-color: rgba(0, 0, 0, 0.7254901961);
+  max-width: 100rem;
+  width: 45rem;
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.boxIfNotAllowedLocation img {
+  width: 20rem;
+}
+.boxIfNotAllowedLocation .msg {
+  color: #fff;
+  width: 75%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.boxIfNotAllowedLocation p {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.container {
+  width: 55rem;
+  height: 50rem;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.7254901961);
+  color: #fff;
+  margin: auto;
+}
+.container .leftbox {
+  width: 60%;
+  background-image: url("./assets/leftBoxBg.jpg");
+  background-size: cover;
+  display: grid;
+  padding: 1.5rem;
+}
+.container .leftbox .left-top {
+  text-align: end;
+  justify-content: end;
+  width: 100%;
+}
+.container .leftbox .left-top .place-Name {
+  font-size: 2.3rem;
+}
+.container .leftbox .left-top .place-Name .cityCouldntFound {
+  font-size: 1.3rem;
+}
+.container .leftbox .left-top .country-Name {
+  font-size: 1.3rem;
+}
+.container .leftbox .left-bottom {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+.container .leftbox .left-bottom .timeAndDate .time {
+  font-size: 2rem;
+}
+.container .leftbox .left-bottom .timeAndDate .dayAndDate {
+  font-size: 1.3rem;
+}
+.container .leftbox .left-bottom .tempareture {
+  font-size: 3.8rem;
+}
+.container .rightbox {
+  width: 40%;
+  text-align: center;
+}
+.container .rightbox .right-top {
+  height: 25%;
+  padding: 2rem 0;
+}
+.container .rightbox .right-top .errMassage {
+  height: 2rem;
+  width: 80%;
+  margin: 0.2rem auto;
+  text-align: start;
+}
+.container .rightbox .right-top .iconContainer {
+  width: 60%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+.container .rightbox .right-top .iconContainer .slide-right {
+  animation: slide-right 20s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate both;
+  width: 9rem;
+}
+.container .rightbox .right-bottom {
+  height: 75%;
+  padding: 3rem;
+}
+.container .rightbox .right-bottom .weather-type {
+  font-weight: 500;
+  font-size: 3rem;
+  margin-top: 2rem;
+}
+.container .rightbox .right-bottom .weatherTypeHr {
+  width: 80%;
+  color: rgba(255, 255, 255, 0.1921568627);
+  display: flex;
+  margin: 1rem auto;
+}
+.container .rightbox .right-bottom .placeName {
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+.container .rightbox .right-bottom .data-rows {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+@keyframes slide-right {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 45%;
+  }
+  main {
+    width: 95vw;
+  }
+  .errMsg {
+    font-size: 2rem;
+  }
+  .container {
+    height: 45vh;
+    width: 80vw;
+  }
+  .container .leftbox {
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+  }
+  .container .leftbox .left-top {
+    line-height: 2.8rem;
+  }
+  .container .leftbox .left-top .place-Name {
+    font-size: 2.8rem;
+  }
+  .container .leftbox .left-top .place-Name .cityCouldntFound {
+    font-size: 1rem;
+  }
+  .container .leftbox .left-top .country-Name {
+    font-size: 1.8rem;
+  }
+  .container .leftbox .left-bottom {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+  }
+  .container .leftbox .left-bottom .timeAndDate .time {
+    font-size: 2.5rem;
+  }
+  .container .leftbox .left-bottom .timeAndDate .dayAndDate {
+    font-size: 1.3rem;
+  }
+  .container .leftbox .left-bottom .tempareture {
+    font-size: 2.8rem;
+  }
+  .container .rightbox .right-top {
+    padding: 0.5rem 0;
+  }
+  .container .rightbox .right-top .iconContainer {
+    width: 55%;
+    display: flex;
+    justify-content: start;
+  }
+  .container .rightbox .right-top .iconContainer .slide-right {
+    animation: slide-right 20s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate both;
+    display: flex;
+    justify-content: center;
+    width: 9rem;
+  }
+  .container .rightbox .right-bottom {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+  .container .rightbox .right-bottom .weather-type {
+    font-size: 1.8rem;
+    padding-top: 1rem;
+  }
+  .container .rightbox .right-bottom hr {
+    margin: 1rem auto;
+  }
+  .container .rightbox .right-bottom .placeName {
+    font-size: 1.4rem;
+  }
+  .container .rightbox .right-bottom .data-rows {
+    margin: 0.4rem 0;
+    font-size: 1.1rem;
+  }
+  @keyframes slide-right {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+    100% {
+      transform: translateX(-10px);
+    }
+  }
+}
+@media (max-width: 400px) {
+  .rightbox .right-bottom {
+    padding: 0.5rem;
+    padding-top: 2rem !important;
+  }
+  .rightbox .right-bottom .weather-type {
+    padding-top: 1.5rem !important;
+  }
+  .rightbox .right-bottom hr {
+    margin: 0.5rem auto !important;
+  }
+}/*# sourceMappingURL=App.css.map */
