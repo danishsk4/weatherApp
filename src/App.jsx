@@ -265,8 +265,8 @@ function App() {
                     type="text"
                     id="hero-field"
                     name="hero-field"
-                    placeholder="Search Here..."
-                    className="w-[70%] bg-[#ffffff00] rounded border border-[#ffffff31] focus:border-[#fc6579] text-base outline-none text-[#fc6579] py-2 px-3 leading-9 text-xl"
+                    placeholder="Search Here..." //text-base
+                    className="w-[70%] bg-[#ffffff00] rounded border border-[#ffffff31] focus:border-[#fc6579]  outline-none text-[#fc6579] py-2 px-3 leading-9 text-xl"
                   />
                   <button
                     onClick={() => invokeSearch(search)}
